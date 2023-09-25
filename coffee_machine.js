@@ -12,12 +12,6 @@ const ingredients = {
     beans: 15
 };
 
-function userPrompt(prompt) {
-    console.log("");
-    let usersReponse = Number(input(prompt));
-    return usersReponse;
-}
-
 function addToInventory() {
     for (let index in inventory) {
         let qty = Number(input(inventory[index].prompt));
@@ -39,7 +33,6 @@ function checkInventory() {
 function main() {
     addToInventory();
     let capacity = checkInventory();
-    console.log(`DEBUG: capacity = ${capacity}`);
     console.log("Write how many cups of coffee you will need:");
     let cupsOfCoffee = Number(input());
     let remainder = capacity - cupsOfCoffee;
@@ -53,5 +46,3 @@ function main() {
 }
 
 main();
-
-
